@@ -39,7 +39,7 @@ namespace PrimesInE
                     while ((line = sr.ReadLine()) != null || isTestStringPrime == false)
                     {
                         remainder = remainder + line;
-                        for (int i = 0; i < line.Length && (remainder == "" || remainder.Length > 10); i++)
+                        for (int i = 0; remainder.Length >= 10; i++)
                         {
                             string testString = line.Substring(i, 10);
                             isTestStringPrime = isPrime(testString);
